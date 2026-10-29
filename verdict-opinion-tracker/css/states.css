@@ -1,0 +1,26 @@
+/* Empty / error / skeleton / misc */
+/* ============================= EMPTY / ERROR STATES ============================= */
+.empty{ text-align:center; padding:44px 20px; color:var(--muted); }
+.ic{ width:64px; height:64px; border-radius:20px; background:var(--paper-soft); display:flex; align-items:center; justify-content:center; margin:0 auto; color:var(--ink-500); }
+
+/* ============================= SKELETON ============================= */
+.sk{ background:linear-gradient(90deg, var(--paper-dim) 25%, #E2E4EB 37%, var(--paper-dim) 63%); background-size:400% 100%; animation:shimmer 1.3s ease infinite; border-radius:10px; }
+.sk-card{ height:88px; border-radius:16px; margin-bottom:12px; }
+.sk-card.tall{ height:150px; }
+.sk-line{ height:12px; border-radius:6px; margin-bottom:8px; }
+
+/* ============================= MISC ============================= */
+.timeline{ position:relative; padding-left:28px; }
+.tl-item{ position:relative; padding-bottom:22px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-dot{ position:absolute; left:-28px; top:2px; width:18px; height:18px; border-radius:50%; background:var(--paper); border:2px solid var(--line); display:flex; align-items:center; justify-content:center; }
+.tl-item.done .tl-dot{ background:var(--verify); border-color:var(--verify); color:#fff; }
+.tl-item.now .tl-dot{ background:var(--gold); border-color:var(--gold); color:#fff; }
+.tl-line{ position:absolute; left:-19.5px; top:20px; bottom:0; width:1.5px; background:var(--line); }
+.tl-item.done .tl-line{ background:var(--verify); }
+
+.hscroll{ display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x proximity; margin:0 -16px; padding:2px 16px 6px; scrollbar-width:none; }
+.hscroll::-webkit-scrollbar{ display:none; }
+.hcard{ scroll-snap-align:start; flex-shrink:0; }
+
+.ring-mini{ width:34px; height:34px; border-radius:50%; border:2px solid var(--verify); display:flex; align-items:center; justify-content:center; color:var(--verify); flex-shrink:0; }

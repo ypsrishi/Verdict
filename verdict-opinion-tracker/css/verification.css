@@ -1,0 +1,29 @@
+/* Face camera + location verification */
+/* ============================= FACE CAMERA + SCAN OVERLAY ============================= */
+.cam-wrap{ position:relative; width:100%; aspect-ratio:3/4; border-radius:20px; overflow:hidden; background:#0E1830; }
+#faceVideo{ width:100%; height:100%; object-fit:cover; transform:scaleX(-1); display:block; }
+.cam-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.cam-guide{ width:70%; height:auto; }
+.guide-oval{ fill:none; stroke:rgba(255,255,255,.55); stroke-width:2; stroke-dasharray:6 5; }
+.corner{ fill:none; stroke:#fff; stroke-width:3; stroke-linecap:round; opacity:.85; }
+.mesh-group{ opacity:0; transition:opacity .5s ease; }
+.mesh-group.active{ opacity:1; }
+.mesh-group circle{ fill:var(--verify); filter:drop-shadow(0 0 4px var(--verify)); }
+.mesh-group line{ stroke:var(--verify); stroke-width:1; opacity:.6; }
+.scan-line{ fill:var(--gold); opacity:0; filter:drop-shadow(0 0 6px var(--gold)); }
+.scan-line.sweeping{ opacity:1; animation:scanSweep 1.6s ease-in-out infinite; }
+@keyframes scanSweep{ 0%{ transform:translateY(0); } 50%{ transform:translateY(246px); } 100%{ transform:translateY(0); } }
+.particles{ position:absolute; inset:0; pointer-events:none; }
+.particle{ position:absolute; width:3px; height:3px; border-radius:50%; background:var(--gold); opacity:0; animation:particleDrift 2.4s ease-in-out infinite; }
+@keyframes particleDrift{ 0%{ opacity:0; transform:translateY(0); } 20%{ opacity:.9; } 80%{ opacity:.9; } 100%{ opacity:0; transform:translateY(-14px); } }
+.cam-status{ position:absolute; left:0; right:0; bottom:14px; text-align:center; color:#fff; font-size:13px; font-weight:700; text-shadow:0 1px 3px rgba(0,0,0,.5); }
+.cam-success-badge{ position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; background:var(--verify); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,.3); animation:fadeIn .3s ease; }
+
+/* ============================= LOCATION VERIFICATION ============================= */
+.loc-card{ background:var(--paper-soft); border:1px solid var(--line); border-radius:var(--r-lg); padding:26px 20px; margin-top:8px; }
+.loc-pin-wrap{ width:100px; height:100px; margin:6px auto 0; border-radius:50%; background:var(--ink-900); color:#fff; display:flex; align-items:center; justify-content:center; position:relative; }
+.loc-radar{ position:absolute; inset:0; border-radius:50%; border:2px solid var(--gold); opacity:0; }
+.loc-pin-wrap.active .loc-radar{ animation:radarPulse 1.8s ease-out infinite; }
+.loc-radar.delay{ animation-delay:.6s !important; }
+.loc-radar.delay2{ animation-delay:1.2s !important; }
+@keyframes radarPulse{ 0%{ transform:scale(1); opacity:.7; } 100%{ transform:scale(1.9); opacity:0; } }

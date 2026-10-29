@@ -1,0 +1,32 @@
+/* Cards, badges, avatars */
+/* ============================= CARDS ============================= */
+.card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--r-card); padding:16px; margin-bottom:12px; box-shadow:var(--shadow-sm); transition:transform .15s ease, box-shadow .15s ease; }
+.card.flush{ padding:0; overflow:hidden; }
+.card.soft{ background:var(--paper-soft); border-color:var(--line-soft); box-shadow:none; }
+.card.hero{ border:none; box-shadow:var(--shadow-md); }
+.card-row{ display:flex; gap:12px; align-items:flex-start; }
+.card-tap{ display:block; }
+.card-tap:active{ transform:scale(.985); }
+.list-row{ display:flex; align-items:center; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line); transition:background .12s ease; }
+.list-row:last-child{ border-bottom:none; }
+.list-row:active{ background:var(--paper-soft); }
+.list-row .chev{ color:#B7BEC9; flex-shrink:0; }
+
+/* ============================= BADGES ============================= */
+.pill{ display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border-radius:var(--r-chip); font-size:11.5px; font-weight:700; letter-spacing:.01em; white-space:nowrap; }
+.pill.active{ background:var(--gold-soft); color:var(--gold-ink); }
+.pill.upcoming{ background:var(--paper-dim); color:var(--ink-500); }
+.pill.closed{ background:var(--stamp-soft); color:var(--stamp); }
+.pill.verified{ background:var(--verify-soft); color:var(--verify); }
+.pill.pending{ background:var(--gold-soft); color:var(--gold-ink); }
+.pill.rejected{ background:var(--stamp-soft); color:var(--stamp); }
+.pill.info{ background:var(--info-soft); color:var(--info); }
+.pill-dot{ width:6px; height:6px; border-radius:50%; background:currentColor; flex-shrink:0; }
+
+/* ============================= AVATARS ============================= */
+.avatar{ width:44px; height:44px; border-radius:12px; background:var(--ink-900); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:600; font-size:16px; flex-shrink:0; }
+.avatar.round{ border-radius:50%; }
+.avatar.sm{ width:34px; height:34px; font-size:13px; border-radius:9px; }
+.avatar.lg{ width:76px; height:76px; font-size:25px; border-radius:22px; }
+.avatar.photo{ position:relative; box-shadow:inset 0 -14px 18px -8px rgba(0,0,0,.25); }
+.avatar.photo::after{ content:''; position:absolute; inset:0; border-radius:inherit; background:linear-gradient(160deg, rgba(255,255,255,.22), rgba(0,0,0,.12) 70%); }

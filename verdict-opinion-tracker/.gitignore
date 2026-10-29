@@ -1,0 +1,19 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+storage/data/store.json
+storage/data/store.lock
+storage/data/ballots.json
+storage/data/secret.key
+storage/data/photos.json
+storage/data/user-activity/*.jsonl
+storage/photos/*
+!storage/photos/.gitkeep

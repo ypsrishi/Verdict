@@ -1,0 +1,8 @@
+# Block direct web access — photos are served only through api/photos.php
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

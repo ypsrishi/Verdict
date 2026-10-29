@@ -1,0 +1,16 @@
+/* Buttons */
+/* ============================= BUTTONS ============================= */
+.btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:14px 18px; border-radius:var(--r-btn); font-weight:700; font-size:14.5px; border:none; transition:transform .12s ease, background .15s ease, opacity .15s ease; }
+.btn:active{ transform:scale(.97); }
+.btn-primary{ background:var(--ink-900); color:#fff; box-shadow:0 8px 18px rgba(21,38,74,.22); }
+.btn-primary:active{ background:var(--ink-700); }
+.btn-secondary{ background:var(--paper-soft); color:var(--ink-900); border:1px solid var(--line); }
+.btn-gold{ background:var(--gold); color:#fff; box-shadow:0 8px 18px rgba(189,138,46,.25); }
+.btn-outline{ background:transparent; color:var(--ink-900); border:1.5px solid var(--ink-900); }
+.btn-danger-outline{ background:transparent; color:var(--stamp); border:1.5px solid var(--stamp-soft); }
+.btn.sm{ padding:9px 14px; font-size:13px; width:auto; }
+.btn:disabled{ opacity:.4; transform:none !important; box-shadow:none; }
+.spinner{ width:14px; height:14px; border-radius:50%; border:2px solid currentColor; border-right-color:transparent; opacity:.9; animation:spin .7s linear infinite; display:inline-block; vertical-align:middle; flex-shrink:0; }
+@keyframes shakeX{ 10%,90%{transform:translateX(-1px);} 20%,80%{transform:translateX(2px);} 30%,50%,70%{transform:translateX(-4px);} 40%,60%{transform:translateX(4px);} }
+.shake{ animation:shakeX .45s ease; }
+.cta-area{ position:sticky; bottom:0; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 28%); padding:18px 16px 16px; margin:0 -16px -28px; display:flex; flex-direction:column; gap:10px; }

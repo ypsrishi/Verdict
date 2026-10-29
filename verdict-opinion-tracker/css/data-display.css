@@ -1,0 +1,25 @@
+/* Progress, stats, stamp, party chip */
+/* ============================= PROGRESS / STATS ============================= */
+.progress-track{ height:6px; border-radius:99px; background:var(--paper-dim); overflow:hidden; }
+.progress-fill{ height:100%; border-radius:99px; background:var(--gold); transition:width .6s cubic-bezier(.2,.8,.2,1); }
+.progress-fill.verify{ background:var(--verify); }
+.stat-box{ flex:1; background:var(--paper-soft); border:1px solid var(--line); border-radius:14px; padding:13px; }
+.stat-num{ font-family:var(--font-display); font-size:22px; font-weight:700; }
+.bar-row{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.bar-track{ flex:1; height:9px; border-radius:99px; background:var(--paper-dim); overflow:hidden; }
+.bar-fill{ height:100%; border-radius:99px; background:var(--ink-900); transition:width .7s cubic-bezier(.2,.8,.2,1); }
+.bar-fill.gold{ background:var(--gold); }
+.bar-fill.lead{ background:var(--verify); }
+
+/* ============================= SIGNATURE STAMP ============================= */
+.stamp-wrap{ display:flex; flex-direction:column; align-items:center; text-align:center; padding:10px 0 4px; }
+.stamp-ring{ width:104px; height:104px; border-radius:50%; border:2px solid var(--verify); position:relative; display:flex; align-items:center; justify-content:center; }
+.stamp-ring::before{ content:''; position:absolute; inset:7px; border-radius:50%; border:1px dashed var(--verify); opacity:.55; }
+.stamp-ring.gold{ border-color:var(--gold); } .stamp-ring.gold::before{ border-color:var(--gold); }
+.stamp-ring.stamp{ border-color:var(--stamp); } .stamp-ring.stamp::before{ border-color:var(--stamp); }
+.stamp-badge-sm{ width:22px; height:22px; border-radius:50%; background:var(--verify-soft); border:1px solid var(--verify); display:inline-flex; align-items:center; justify-content:center; color:var(--verify); flex-shrink:0; }
+
+/* ============================= PARTY CHIP / SYMBOL ============================= */
+.party-chip{ display:inline-flex; align-items:center; gap:6px; }
+.party-symbol{ width:22px; height:22px; border-radius:7px; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff; }
+.party-logo{ width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff; font-size:9px; font-weight:800; border:2px solid #fff; box-shadow:0 0 0 1px var(--line); }

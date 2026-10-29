@@ -1,0 +1,8 @@
+/* Auth screens */
+/* ============================= AUTH SCREENS ============================= */
+.auth-content{ flex:1; display:flex; flex-direction:column; padding:26px 22px 22px; overflow-y:auto; }
+.auth-hero{ padding:26px 0 8px; }
+.step-dots{ display:flex; gap:6px; margin-bottom:18px; }
+.step-dot{ height:4px; flex:1; border-radius:99px; background:var(--paper-dim); transition:background .2s ease; }
+.step-dot.done{ background:var(--verify); }
+.step-dot.now{ background:var(--ink-900); }

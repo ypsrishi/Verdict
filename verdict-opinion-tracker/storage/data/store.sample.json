@@ -1,0 +1,116 @@
+{
+  "admins": {
+    "adm_demo1": {
+      "id": "adm_demo1",
+      "name": "Rahul Sathe",
+      "email": "rahul@ridgeview.edu",
+      "passHash": "$2y$10$vjYo8BQOGejDgfPLJ6ZAC.QfCcKTVdkwQ0qEXGdp1.DEBSCI11WNy",
+      "instCode": "RIDGEVIEW26",
+      "created": "2026-10-04T10:00:00+05:30"
+    }
+  },
+  "institutions": {
+    "RIDGEVIEW26": {
+      "code": "RIDGEVIEW26",
+      "name": "Ridgeview Institute of Technology",
+      "adminIds": [
+        "adm_demo1"
+      ],
+      "created": "2026-10-04T10:00:00+05:30",
+      "db": {
+        "constituencies": {
+          "s_1": [
+            {
+              "id": "c_1",
+              "name": "Engineering Block",
+              "count": 412,
+              "eligible": true
+            },
+            {
+              "id": "c_2",
+              "name": "Arts Block",
+              "count": 268,
+              "eligible": true
+            }
+          ]
+        },
+        "surveys": [
+          {
+            "id": "s_1",
+            "title": "Student Council Election 2026",
+            "org": "Ridgeview Institute of Technology",
+            "category": "Educational",
+            "status": "Active",
+            "start": "Oct 10, 2026",
+            "end": "Oct 20, 2026",
+            "responses": 0,
+            "eligiblePool": 680,
+            "constituencies": 2,
+            "daysLeftText": "Closes Oct 20, 2026",
+            "desc": "Annual council election.",
+            "resultsPublished": true,
+            "declared": false
+          }
+        ],
+        "parties": [
+          {
+            "id": "p_1",
+            "name": "Progress Alliance",
+            "tag": "PA",
+            "members": 1,
+            "founded": 2019,
+            "color": "#BD8A2E",
+            "sym": "symSun",
+            "active": true
+          }
+        ],
+        "participants": [
+          {
+            "id": "pt_1",
+            "name": "Aarav Mehta",
+            "surveyId": "s_1",
+            "constId": "c_1",
+            "constName": "Engineering Block",
+            "partyId": "p_1",
+            "year": "Final Year, Computer Engineering",
+            "tagline": "Better labs.",
+            "manifesto": "Upgrade lab equipment.",
+            "share": 0,
+            "votes": 0,
+            "active": true
+          },
+          {
+            "id": "pt_2",
+            "name": "Priya Nair",
+            "surveyId": "s_1",
+            "constId": "c_1",
+            "constName": "Engineering Block",
+            "partyId": null,
+            "year": "Third Year, Electronics",
+            "tagline": "One helpdesk.",
+            "manifesto": "Single student helpdesk.",
+            "share": 0,
+            "votes": 0,
+            "active": true
+          }
+        ],
+        "announcements": [
+          {
+            "id": "a_1",
+            "tag": "Reminder",
+            "title": "Voting opens Oct 10",
+            "date": "Oct 4, 2026",
+            "body": "Be ready.",
+            "survey": "s_1",
+            "published": true
+          }
+        ],
+        "notifications": [],
+        "adminNotifications": [],
+        "activity": [],
+        "links": [],
+        "applications": []
+      }
+    }
+  }
+}
